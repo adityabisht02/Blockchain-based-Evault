@@ -1,0 +1,70 @@
+.pageparent{
+    display: flex;
+    flex-direction: column;
+}
+
+.homebutton {
+    background-color: #b43401 !important;
+    color: white;
+    margin-top: -20px !important;
+    height: 45px !important;
+    margin-left: 2px !important;
+    border-radius: 0 !important;
+    transition: background-color 0.3s;
+}
+  
+.aboutusbutton {
+    background-color: #0c0d0d !important;
+    color: white;
+    margin-top: -20px !important;
+    height: 45px !important;
+    margin-left: 2px !important;
+    border-radius: 0 !important;
+    transition: background-color 0.3s;
+}
+  
+.aboutusbutton:hover {
+    background-color: #b43401 !important;
+}
+
+.footer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_boundary{
+    width: 100%;
+    height: 10px;
+    background-color: #e7e6e6;
+}
+
+.footerimgs{
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    background-color: white;
+}
+
+.footer2{
+    background-image: url('./Images/footer_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.separator{
+    margin: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    font-weight: bold;
+    color: #575757;
+}

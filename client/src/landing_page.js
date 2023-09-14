@@ -27,13 +27,27 @@ import { useNavigate } from 'react-router-dom';
 import Ministryname from './Images/Ministryname.png';
 import banner1 from './Images/banner1.png';
 import banner2 from './Images/banner2.png';
-import zIndex from '@mui/material/styles/zIndex';
+import img1 from './Images/1.png';
+import img2 from './Images/2.jpg';
+import img3 from './Images/3.png';
+import img4 from './Images/4.png';
+import img5 from './Images/5.png';
+import img6 from './Images/6.png';
 
+import zIndex from '@mui/material/styles/zIndex';
+import HomeIcon from '@mui/icons-material/Home'; // Import the MUI icon
+import './landing_page.scss';
 
 function Landing_page() {
   const navigate = useNavigate();
+  const divToScrollToRef = useRef(null);
+  const scrollButtonRef = useRef(null);
+
+  const handleScrollClick = () => {
+    divToScrollToRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <div >
+    <div className='pageparent'>
       <AppBar position="static" className='dummy5' elevation={0} style={{ background: '#e4e3db', height: "45px" }}>
         <Container className='cont' maxWidth="xl">
           <Toolbar disableGutters>
@@ -44,18 +58,64 @@ function Landing_page() {
           </Toolbar>
         </Container>
       </AppBar>
-      <img src={banner2} alt="Banner" width="33%" />
-      <img src={banner1} alt="Banner" width="14.5%" style={{ marginLeft: "705px"}}/>
+      <div>
+        <img src={banner2} alt="Banner" width="33%" />
+        <img src={banner1} alt="Banner" width="14.5%" style={{ marginLeft: "705px"}}/>
+      </div>
       <AppBar position="static" className='dummy5' style={{ background: '#0c0d0d', height: "45px" }}>
         <Container className='cont' maxWidth="xl">
-          <Toolbar disableGutters>
-          <div style={{ display: 'flex' }}>
-            <HouseIcon sx={{marginTop: "-20px"}}/>
-          </div>
+          <Toolbar disableGutters style={{display:'flex'}}>
+          <Button disableElevation variant="contained" size="small" className="homebutton" onClick={handleScrollClick}>
+            <HomeIcon fontSize="large"/>
+          </Button>
+          <Button disableElevation variant="contained" className="aboutusbutton" onClick={handleScrollClick}>
+            About Us
+          </Button>
+          <Button disableElevation variant="contained" className="aboutusbutton" onClick={handleScrollClick}>
+            View Cases
+          </Button>
+          <Button disableElevation variant="contained" className="aboutusbutton" onClick={handleScrollClick}>
+            Authenticate Wallet
+          </Button>
           </Toolbar>
         </Container>
       </AppBar>
-
+      <div className='footer'>
+      <div className='footer_boundary'/>
+        <div className='footerimgs'>
+          <img src={img1} alt="img1" width="14.5%" height='150px' style={{ marginLeft: "15px"}}/>
+          <img src={img2} alt="img2" width="11.5%" height='80px' style={{ marginLeft: "45px"}}/>
+          <img src={img3} alt="img3" width="9.5%" height='100px' style={{ marginLeft: "45px"}}/>
+          <img src={img4} alt="img4" width="9.5%" height='100px' style={{ marginLeft: "45px"}}/>
+          <img src={img5} alt="img5" width="14.5%" height='150px' style={{ marginLeft: "45px"}}/>
+          <img src={img6} alt="img6" width="14.5%" height='150px' style={{ marginLeft: "45px"}}/>
+        </div>
+        <div className='footer2'>
+          <Typography color={'white'}>
+            Website Policies
+          </Typography>
+          <span className="separator">|</span>
+          <Typography color={'white'}>
+            Help
+          </Typography>
+          <span className="separator">|</span>
+          <Typography color={'white'}>
+            Disclaimer
+          </Typography>
+          <span className="separator">|</span>
+          <Typography color={'white'}>
+            Contact Us
+          </Typography>
+          <span className="separator">|</span>
+          <Typography color={'white'}>
+            Feedback
+          </Typography>
+          <span className="separator">|</span>
+          <Typography color={'white'}>
+            Visitor's Analytics
+          </Typography>
+        </div>
+      </div>
     </div>
   );
 }
