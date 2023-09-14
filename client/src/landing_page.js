@@ -92,13 +92,12 @@ function Landing_page() {
           </Toolbar>
         </Container>
       </AppBar>
-      <div>
+      <div style={{display:"flex", justifyContent:"space-between"}}>
         <img src={banner2} alt="Banner" width="33%" />
         <img
           src={banner1}
           alt="Banner"
           width="14.5%"
-          style={{ marginLeft: "705px" }}
         />
       </div>
       <AppBar
