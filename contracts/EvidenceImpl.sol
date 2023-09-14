@@ -5,9 +5,15 @@ pragma solidity ^0.8.6;
 contract EvidenceImpl{
     address owner;
     mapping(address=>bool) nodalOfficers;
-    string[] evidence;
+    Evidence[] evidence;
     constructor(){
         owner=msg.sender;
+    }
+
+    struct Evidence{
+        string name;
+        string description;
+        string uri;
     }
      modifier onlyOwner(){
         require(msg.sender==owner,"Only owner has the right to access this");
@@ -21,10 +27,10 @@ contract EvidenceImpl{
     function isNodalOfficer(address add) public view returns(bool){
         return nodalOfficers[add];
     }
-    function addEvidence(string memory uri) public {
-        evidence.push(uri);
+    function addEvidence(string memory name,string memory description,string memory uri) public {
+        evidence.push(Evidence(name,description,uri));
     }
-    function retrieveEvidences() public view returns(string[] memory){
+    function retrieveEvidences() public view returns(Evidence[] memory){
         return evidence;
     }
 
