@@ -39,10 +39,10 @@ import img3 from "./Images/3.png";
 import img4 from "./Images/4.png";
 import img5 from "./Images/5.png";
 import img6 from "./Images/6.png";
-
 import zIndex from "@mui/material/styles/zIndex";
 import HomeIcon from "@mui/icons-material/Home"; // Import the MUI icon
 import "./landing_page.scss";
+import Evidence_form from './Evidence_form';
 
 function Landing_page() {
   const navigate = useNavigate();
@@ -143,6 +143,9 @@ function Landing_page() {
           </Toolbar>
         </Container>
       </AppBar>
+
+      <Evidence_form/>
+      
       <div className="footer">
         <div className="footer_boundary" />
         <div className="footerimgs">
