@@ -1,0 +1,36 @@
+about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+  
+  .about-us-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-us-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-us-info {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .about-us-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-info p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .text-about-us{
+    text-align: center;
+  }

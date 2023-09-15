@@ -85,11 +85,7 @@ function FormDialog({ signer }) {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <input
-            type="file"
-            accept="image/*" // Specify the accepted file types
-            onChange={handleFileChange}
-          />
+          <input type="file" accept="image/*" onChange={handleFileChange} />
           <Button
             variant="contained"
             color="primary"

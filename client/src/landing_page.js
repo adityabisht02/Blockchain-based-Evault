@@ -43,6 +43,8 @@ import zIndex from "@mui/material/styles/zIndex";
 import HomeIcon from "@mui/icons-material/Home"; // Import the MUI icon
 import "./landing_page.scss";
 import Evidence_form from "./Evidence_form";
+import EvidenceCards from "./evidenceCards";
+import AboutUs from "./AboutUs";
 
 function Landing_page({ signer }) {
   const navigate = useNavigate();
@@ -140,7 +142,9 @@ function Landing_page({ signer }) {
         </Container>
       </AppBar>
 
-      <Evidence_form signer={signer} />
+      {/* <Evidence_form/> */}
+      <EvidenceCards />
+      {/* <AboutUs/> */}
 
       <div className="footer">
         <div className="footer_boundary" />
