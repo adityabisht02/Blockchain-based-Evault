@@ -42,9 +42,9 @@ import img6 from "./Images/6.png";
 import zIndex from "@mui/material/styles/zIndex";
 import HomeIcon from "@mui/icons-material/Home"; // Import the MUI icon
 import "./landing_page.scss";
-import Evidence_form from './Evidence_form';
+import Evidence_form from "./Evidence_form";
 
-function Landing_page() {
+function Landing_page({ signer }) {
   const navigate = useNavigate();
   const divToScrollToRef = useRef(null);
   const scrollButtonRef = useRef(null);
@@ -92,13 +92,9 @@ function Landing_page() {
           </Toolbar>
         </Container>
       </AppBar>
-      <div style={{display:"flex", justifyContent:"space-between"}}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <img src={banner2} alt="Banner" width="33%" />
-        <img
-          src={banner1}
-          alt="Banner"
-          width="14.5%"
-        />
+        <img src={banner1} alt="Banner" width="14.5%" />
       </div>
       <AppBar
         position="static"
@@ -144,8 +140,8 @@ function Landing_page() {
         </Container>
       </AppBar>
 
-      <Evidence_form/>
-      
+      <Evidence_form signer={signer} />
+
       <div className="footer">
         <div className="footer_boundary" />
         <div className="footerimgs">
