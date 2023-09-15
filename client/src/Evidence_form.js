@@ -25,12 +25,10 @@ function FormDialog() {
   };
 
   const handleSubmit = () => {
-    // You can handle form submission here
     console.log('Name:', name);
     console.log('Description:', description);
     console.log('File:', file);
 
-    // Close the dialog
     setOpen(false);
   };
 
@@ -61,7 +59,7 @@ function FormDialog() {
           />
           <input
             type="file"
-            accept="image/*" // Specify the accepted file types
+            accept="image/*"
             onChange={handleFileChange}
           />
           <Button
